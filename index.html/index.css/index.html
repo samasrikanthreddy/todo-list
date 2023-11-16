@@ -1,0 +1,103 @@
+// // *
+// **
+// *
+// **
+// ***
+ 
+
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
+    }
+    console.log(row);
+}
+
+// ***
+// **
+// *
+// **
+// *
+function printStarPattern(rows) {
+    for (let i = rows; i >= 1; i--) {
+      let pattern = "";
+      for (let j = 1; j <= i; j++) {
+        pattern += "*";
+      }
+      console.log(pattern);
+    }
+  }
+  
+  printStarPattern(5);
+
+
+
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+
+let bag="";
+for(let i=1;i<=5;i++){
+  bag=bag+i+" ";
+  console.log(bag)
+}
+
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+for (let i = 5; i >= 1; i--) {
+    let spaces = " ".repeat(5 - i); // Adding spaces before numbers
+    let numbers = " ";
+    for (let j = 1; j <= i; j++) {
+      numbers += j;
+    }
+    console.log(spaces + numbers);
+  }
+
+
+  //array map method
+
+  let array5=[45,25,65]
+  let a =arr.map((value,index,array)=>{
+    // console.log(value,index,array)
+    return value+index
+  })
+  console.log(array5)
+
+  // array filter method
+
+  let arr2=[25,84,65,0,3,5]
+  let a2=arr2.filter((a)=>{
+    return a<10
+  })
+  console.log(a2,arr2)
+
+  //reduce method
+
+  let arr6=[1,2,3,5,2,1]
+  let a3=arr6.reduce((h1, h2)=>{
+    return h1 + h2
+  })
+  console.log(a3)
+
+//find the  second largest number in an array
+//const arr=[11,2,44,7,25,19,47,10]
+const getSecondLargestNumber=(arr=[])=>{
+let largestNumber=arr[0];
+let secondLargestNumber=arr[0];
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i]>largestNumber){
+    secondLargestNumber=largestNumber;
+    largestNumber=arr[i]
+  }else if(arr[i]>secondLargestNumber){
+    secondLargestNumber=arr[i];
+  }
+}
+return secondLargest; 
+}
